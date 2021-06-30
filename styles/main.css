@@ -1,26 +1,67 @@
+@font-face {
+  font-family: 'Permanent Marker';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/permanentmarker/v10/Fh4uPib9Iyv2ucM6pGQMWimMp004Hao.ttf) format('truetype');
+}
 body {
   background-color: white;
-  color: grey;
   margin: 0;
 }
 nav {
-  display: flex;
-  justify-content: flex-end;
-  padding: 15px 10px;
   position: fixed;
   top: 0;
   right: 0;
+  width: 100%;
 }
-nav a {
+nav div.nav-content {
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
+  padding: 15px 10px;
+  transition: 0.15s all ease-in-out;
+}
+nav div.nav-content h2.nav-title {
+  display: none;
+  color: white;
+  position: absolute;
+  left: 29px;
+  top: -5px;
+  font-family: 'Permanent Marker', arial;
+}
+nav div.nav-content h2.nav-title.showTitle {
+  display: block;
+}
+nav div.nav-content a {
   color: black;
   font-family: arial;
   font-weight: bold;
   margin: 0 10px;
+  padding: 10px 5px;
   text-decoration: none;
   transition: 0.15s all ease-in-out;
 }
-nav a:hover {
+nav div.nav-content a:hover {
   color: white;
+}
+nav.activated {
+  background-color: black;
+}
+nav.activated div.nav-content a {
+  color: white;
+  position: relative;
+}
+nav.activated div.nav-content a:hover:after {
+  background-color: white;
+  content: "";
+  display: block;
+  height: 2px;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transition: 0.15s;
 }
 div.headerSection {
   background-image: url('../images/forest-background1.jpg');
@@ -29,29 +70,20 @@ div.headerSection {
 }
 div.headerSection div.header-text {
   background: linear-gradient(rgba(0, 0, 0, 0.25), black);
+  background-attachment: ;
   display: flex;
   flex-direction: column;
   height: 100%;
   align-items: center;
   color: white;
   justify-content: center;
-  text-shadow: 1px 1px 10px black;
+  font-family: 'Permanent Marker', sans-serif;
 }
 div.headerSection div.header-text h1 {
   margin: 0;
   font-size: 8vw;
   position: relative;
 }
-div.headerSection div.header-text h1:after {
-  background: linear-gradient(to right, rgba(0, 0, 0, 0), #ffffff, #ffffff, rgba(0, 0, 0, 0));
-  content: "";
-  display: block;
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  height: 2px;
-  width: 150px;
-}
 div.headerSection div.header-text h2 {
-  font-size: 2vw;
+  font-size: 2.5vw;
 }
