@@ -23,7 +23,7 @@ nav a:hover {
   color: white;
 }
 div.headerSection {
-  background-image: url('images/forest-background1.jpg');
+  background-image: url('../images/forest-background1.jpg');
   background-size: cover;
   height: 100vh;
 }
