@@ -3,4 +3,61 @@
 body{
   background-color: white;
   color: grey;
+  margin: 0;
+}
+
+nav {
+    display: flex;
+    justify-content: flex-end;
+    padding: 15px 10px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    a {
+        color: black;
+        font-family: arial;
+        font-weight: bold;
+        margin: 0 10px;
+        text-decoration: none;
+        transition: 0.15s all ease-in-out;
+        &:hover {
+            color: white;
+        }
+    }
+}
+
+div.headerSection {
+    background-image: url('images/forest-background1.jpg');
+    background-size: cover;
+    height: 100vh;
+    div.header-text{
+        background: linear-gradient(rgba(0,0,0,.25), black);
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        align-items: center;
+        color: white;
+        justify-content: center;
+        text-shadow: 1px 1px 10px black;
+        h1 {
+            margin: 0;
+            font-size: 8vw;
+            position: relative;
+            &:after{
+                background: linear-gradient(to right, rgba(0,0,0,0), rgb(255,255,255), rgb(255,255,255), rgba(0,0,0,0));
+                content: "";
+                display: block;
+                position: absolute;
+                left: 50%;
+                transform: translateX(-50%);
+                height: 2px;
+                width: 150px;
+            }
+        }
+
+        h2{
+            font-size: 2vw;
+        }
+
+    }
 }
