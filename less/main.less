@@ -1,70 +1,60 @@
 // out: ../styles/main.css
 
+
 // Fonts
  @import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
 
-body{
-  background-color: white;
-  margin: 0;
+// Global Header Styles
+h1, h2, h3, h4{
+  font-family: "Permanent Marker", sans-serif;
 }
 
+// General Styles
+
+html{
+  scroll-behavior: smooth;
+}
+
+body{
+  margin: 0;
+  font-size: 18px;
+  background-color: rgb(233, 233, 226);
+}
+
+// Navigation Styles
 nav {
   position: fixed;
   top: 0;
   right: 0;
   width: 100%;
+  display: none;
 
     div.nav-content{
+      background-color: black;
       display: flex;
       justify-content: flex-end;
       position: relative;
       padding: 15px 10px;
       transition: 0.15s all ease-in-out;
+      font-family: 'Permanent Marker', arial;
 
       h2.nav-title{
-        display: none;
         color: white;
         position: absolute;
         left: 29px;
-        top: -5px;
-        font-family: 'Permanent Marker', arial;
-        &.showTitle{
-          display: block;
-        }
+        top: 17px;
       }
 
       a {
-        color: black;
         font-family: arial;
         font-weight: bold;
         margin: 0 10px;
         padding: 10px 5px;
         text-decoration: none;
         transition: 0.15s all ease-in-out;
-        &:hover {
-          color: white;
-        }
-      }
-    }
-
-
-
-    &.activated{
-      background-color: black;
-      div.nav-content a{
         color: white;
-        position: relative;
-        &:hover:after{
-          background-color: white;
-          content: "";
-          display: block;
-          height: 2px;
-          width: 100%;
-          position: absolute;
-          bottom: 0;
-          left: 0;
-          transition: 0.15s;
-        }
+        font-size: 1.1em;
+        font-family: 'Permanent Marker', arial;
       }
     }
 }
@@ -72,7 +62,9 @@ nav {
 div.headerSection {
     background-image: url('../images/forest-background1.jpg');
     background-size: cover;
+    background-attachment: fixed;
     height: 100vh;
+    margin-bottom: 50px;
     div.header-text{
         background: linear-gradient(rgba(0,0,0,.25), black);
         background-attachment: ;
@@ -94,4 +86,114 @@ div.headerSection {
         }
 
     }
+
+    div.header-nav{
+    a{
+        color: white;
+        text-decoration: none;
+        margin: 0 10px;
+        font-size: 1.5em;
+        position: relative;
+        top: 75px;
+        padding: 5px 10px;
+        &:before{
+            transition: width 0.15s ease-in-out;
+            content: "";
+            display: block;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            height: 2px;
+            width: 0;
+            background-color: white;
+        }
+        &:after{
+            transition: width 0.15s ease-in-out;
+            content: "";
+            display: block;
+            position: absolute;
+            top: 0;
+            right: 0;
+            height: 2px;
+            width: 0;
+            background-color: white;
+        }
+        &:hover{
+            &:before{
+                width: 100%;
+            }
+            &:after{
+                width: 100%;
+            }
+        }
+    }
+}
+}
+
+main#page-content{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+section{
+    scroll-margin-top: 70px;
+    margin-bottom: 50px;
+}
+
+section.multi-section{
+    div.buttons-container{
+        margin-bottom: 15px;
+        button.multi-btn{
+            background-color: black;
+            border: 1px solid black;
+            border-radius: 10px;
+            color: white;
+            font-size: 15px;
+            padding: 10px;
+            &.active{
+                background-color: white;
+                color: black;
+            }
+        }
+    }
+    div.content-container{
+        div.multi-content{
+            display: none;
+            &.active{
+                display: block;
+            }
+        }
+    }
+}
+
+section#skills{
+  div.content-container{
+    div.row{
+      @media(min-width: 992px){
+        margin-left: 40px;
+      }
+    }
+  }
+}
+
+section#contact{
+    form#contact-form{
+        div.form-field{
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 15px;
+            label{
+                margin-bottom: 5px;
+            }
+            input{
+                font-size: 15px;
+                padding: 5px 10px;
+            }
+        }
+    }
+}
+
+footer{
+  text-align: center;
 }

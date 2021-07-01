@@ -3,10 +3,13 @@
   <head>
     <meta charset="utf-8">
     <title>Alex Husky | Portfolio</title>
+    <!-- Site CDNs -->
     <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
-    <script src="js/main.js" charset="utf-8"></script>
-    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles/main.css">
   </head>
   <body>
     <nav>
@@ -15,42 +18,142 @@
         <a href="#about">About</a>
         <a href="#skills">Skills</a>
         <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>        
+        <a href="#contact">Contact</a>
       </div>
     </nav>
     <div class="headerSection">
       <div class="header-text">
         <h1>Alex Husky</h1>
-        <h2>Web Developer | Oregonian</h2>
-        <i class="fa fa-chevron-down"></i>
+        <h2>Front-End Web Developer</h2>
+        <div class="header-nav">
+          <h3></h3>
+          <a href="#about">About</a>
+          <a href="#skills">Skills</a>
+          <a href="#projects">Projects</a>
+          <a href="#contact">Contact</a>
+        </div>
       </div>
     </div>
-    <section id="about">
-      <h2>About</h2>
-      <p>I am a web developer that looking to dive deeper into the field.  I am currently employed as a Tier 2 Support Agent for Dealer Spike.</p>
-    </section>
-    <section id="Skills">
-      <div class="skill-buttons">
-        <button class="skill-btn" sect-target="html">HTML</button>
-        <button class="skill-btn" sect-target="css">CSS</button>
-        <button class="skill-btn" sect-target="js">Javascript</button>
+    <main id="page-content">
+      <section id="about">
+        <h2>About Me</h2>
+        <p>I am a web developer that looking to dive deeper into the field.  I am currently employed as a Tier 2 Support Agent for Dealer Spike.</p>
+      </section>
+      <section id="skills" class="multi-section">
+        <h2>My Skills</h2>
+        <div class="buttons-container">
+          <button class="multi-btn active" sect-target="html">HTML</button>
+          <button class="multi-btn" sect-target="css">CSS</button>
+          <button class="multi-btn" sect-target="js">Javascript</button>
+        </div>
+        <div class="content-container">
+          <div class="multi-content active" id="html">
+            <div class="row">
+              <div class="col-sm-6">
+                <div class="skill-description">
+                  <h4>What is HTML?</h4>
+                  <p>
+                    The HyperText Markup Language, or HTML is the standard markup language for documents designed to be displayed in a web browser. It can be assisted by technologies such as Cascading Style Sheets (CSS) and scripting languages such as JavaScript.
+                      <br><br>
+                    Web browsers receive HTML documents from a web server or from local storage and render the documents into multimedia web pages. HTML describes the structure of a web page semantically and originally included cues for the appearance of the document.
+                  </p>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="my-use">
+                  <h4>My experience with HTML</h4>
+                  <p>
+                    HTML is a language that I use daily, within my current role at Dealer Spike.  I am highly proficient with HTML and can use it effectively.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+
+          </div>
+          <div class="multi-content" id="css">
+            <div class="row">
+              <div class="col-sm-6">
+                <div class="skill-description">
+                  <h4>What is CSS?</h4>
+                  <p>
+                    Cascading Style Sheets (CSS) is a style sheet language used for describing the presentation of a document written in a markup language such as HTML. CSS is a cornerstone technology of the World Wide Web, alongside HTML and JavaScript.
+                    <br><br>
+                    CSS is designed to enable the separation of presentation and content, including layout, colors, and fonts.[3] This separation can improve content accessibility, provide more flexibility and control in the specification of presentation characteristics, enable multiple web pages to share formatting by specifying the relevant CSS in a separate .css file which reduces complexity and repetition in the structural content as well as enabling the .css file to be cached to improve the page load speed between the pages that share the file and its formatting.
+                  </p>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="my-use">
+                  <h4>My experience with CSS</h4>
+                  <p>
+                    CSS is the language that I am most obsessed with.  I use a preprocessor of CSS, within my current role and have even provided training over some of the topics--to my team.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <div class="multi-content" id="js">
+            <div class="row">
+              <div class="col-sm-6">
+                <div class="skill-description">
+                  <h4>What is Javascript?</h4>
+                  <p>
+                    JavaScript often abbreviated as JS, is a programming language that conforms to the ECMAScript specification. JavaScript is high-level, often just-in-time compiled, and multi-paradigm. It has curly-bracket syntax, dynamic typing, prototype-based object-orientation, and first-class functions.
+                    <br><br>
+                    Alongside HTML and CSS, JavaScript is one of the core technologies of the World Wide Web. Over 97% of websites use it client-side for web page behavior, often incorporating third-party libraries. All major web browsers have a dedicated JavaScript engine to execute the code on the user's device.
+                    <br><br>
+                    As a multi-paradigm language, JavaScript supports event-driven, functional, and imperative programming styles. It has application programming interfaces (APIs) for working with text, dates, regular expressions, standard data structures, and the Document Object Model (DOM).
+                  </p>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="my-use">
+                  <h4>My experience with Javascript</h4>
+                  <p>
+                    Vanilla JavaScript isnt' really something that I use too much.  Like many web developers, I make use of JQuery for most of my web functionality coding.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="projects">
+        <h2>Projects</h2>
+      </section>
+      <section id="contact">
+        <h2>Contact Me</h2>
+        <form id="contact-form" action="mailto:alexanderhusky@gmail.com">
+          <div class="form-field">
+            <label for="name" required>Name</label>
+            <input type="text" id="name">
+          </div>
+          <div class="form-field" required>
+            <label for="email">Email</label>
+            <input type="email" id="email">
+          </div>
+          <div class="form-field" required>
+            <label for="comment">Comment</label>
+            <textarea name="comment" id="comment" rows="8" cols="80"></textarea>
+          </div>
+          <input type="submit" value="Send it!">
+        </form>
+      </section>
+    </main>
+    <footer>
+      <div class="footer-text">
+        Design By: Alex Husky &copy; 2021
       </div>
-      <div class="skills-info">
-        <div class="skill-info" id="html">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam condimentum nunc quis suscipit scelerisque. Praesent felis dolor, finibus et est sit amet, sodales auctor libero. Donec hendrerit tempus tortor, a dictum dui pretium a. Morbi venenatis, lacus auctor semper tristique, lectus lacus vulputate augue, a blandit felis diam gravida ipsum. Pellentesque ultrices non velit vel finibus. Curabitur scelerisque ipsum a venenatis mattis. Duis accumsan vel ante at volutpat. Maecenas sed nibh sit amet quam fermentum suscipit sollicitudin a orci. Fusce feugiat iaculis est, ac feugiat nisi tincidunt non. Pellentesque interdum urna leo, ac blandit ante convallis eget. Vestibulum at dolor fringilla, interdum magna ut, convallis ipsum. Phasellus dolor nulla, mattis quis ultricies id, luctus elementum massa. Morbi lectus nisi, malesuada ut bibendum quis, egestas nec nulla. Integer porta, nulla non placerat accumsan, orci tellus pellentesque libero, sit amet lobortis nisi purus sed sem. Aliquam vel ultrices neque. Cras cursus ornare enim vel scelerisque.
-        </div>
-        <div class="skill-info" id="css">
-          Vestibulum sed sodales odio, in molestie ex. In non leo malesuada, facilisis lorem bibendum, commodo nunc. Aenean eu mi nec tellus ornare auctor. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Maecenas consectetur, libero quis facilisis fermentum, sem nisl dapibus eros, in vehicula leo tortor aliquet elit. Nullam aliquet ex sed neque ullamcorper gravida. Phasellus sit amet felis vel libero tincidunt tempor in ut augue.
-            <br><br>
-          In hac habitasse platea dictumst. Etiam consectetur porttitor porta. Phasellus ut arcu mollis, pulvinar diam et, venenatis quam. Integer porttitor libero eget tellus cursus suscipit. Phasellus feugiat lorem at lorem sodales dapibus. Fusce at ligula sit amet felis placerat dapibus. Suspendisse finibus efficitur velit, in blandit mi sodales eget. Praesent ultricies vehicula dui, vitae cursus elit. Donec elit mauris, scelerisque ut urna a, lacinia tincidunt massa. Sed non dapibus nisi. Pellentesque a accumsan mauris. Ut auctor mi sed nulla egestas ullamcorper. Suspendisse nibh turpis, pellentesque vitae maximus vestibulum, rhoncus vel tellus. Vivamus gravida auctor neque quis facilisis.
-        </div>
-        <div class="skill-info" id="js">
-          Quisque dapibus purus non quam imperdiet luctus. Etiam sit amet ligula magna. Sed dictum vulputate quam. Morbi ornare tortor vitae lacus feugiat tincidunt. Vivamus libero massa, feugiat et dolor tempor, varius sagittis dui. Etiam ac lorem sem. Integer aliquam tortor non tincidunt commodo. In ut quam posuere, venenatis purus quis, sagittis metus. Aliquam erat volutpat. Nam at orci id justo faucibus iaculis vitae id eros. Sed quis viverra lectus. Fusce lacinia, leo ac mollis auctor, risus erat euismod tellus, congue euismod erat urna nec purus. Praesent at bibendum velit, et hendrerit libero.
-        </div>
-      </div>
-    </section>
-    <section id="contact">
-      <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdjwuUTWbmrANzwqCDs0sH66MSeQaJF79u9bdzoaZ6jPv9PCQ/viewform?embedded=true" width="100%" height="900" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
-    </section>
+      <script>
+        $('section.multi-section div.buttons-container button.multi-btn').on('click', function(){
+          var sectTarget = $(this).attr('sect-target');
+          $(this).addClass('active').siblings().removeClass('active');
+          $(this).parent().parent().find('div.content-container div#' + sectTarget).addClass('active').siblings().removeClass('active');
+        });
+      </script>
+    </footer>
+    <script src="js/main.js" charset="utf-8"></script>
   </body>
 </html>
