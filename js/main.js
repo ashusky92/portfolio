@@ -1,11 +1,17 @@
 
-// Adds/Removes acviated class to navigation, depending on scroll location
+// Find scroll location of header navigation
+var el = $('div.header-nav');
+var navLoc = el.position().top + el.offset().top + el.outerHeight(true);
+
+// Adds/Removes "activated" class to navigation, depending on scroll location
 $(window).on('scroll', function(){
   var scrollPos = $(this).scrollTop();
-  if(scrollPos > 885){
-    $('nav').slideDown();
-  } else {
-    $('nav').slideUp();
+  if($(window).width() > navLoc){
+    if(scrollPos > 885){
+      $('nav').slideDown();
+    } else {
+      $('nav').slideUp();
+    }
   }
 });
 
