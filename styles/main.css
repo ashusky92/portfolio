@@ -129,7 +129,7 @@ div.headerSection div.header-nav a:hover:after {
 }
 div.headerSection div.header-social {
   display: flex;
-  position: absolute;
+  position: fixed;
   bottom: 20px;
   right: 20px;
 }

@@ -1,9 +1,12 @@
+/*
+  Author: Alex Husky
+*/
 
 // Find scroll location of header navigation
 var el = $('div.header-nav');
 var navLoc = el.position().top + el.offset().top + el.outerHeight(true);
 
-// Adds/Removes "activated" class to navigation, depending on scroll location
+// Adds functionality to elements through website, depending on scroll position
 $(window).on('scroll', function(){
   var scrollPos = $(this).scrollTop();
   if($(window).width() > navLoc){
