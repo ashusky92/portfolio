@@ -11,24 +11,27 @@ h3,
 h4 {
   font-family: "Permanent Marker", sans-serif;
 }
+button {
+  border: none;
+}
 html {
   scroll-behavior: smooth;
 }
 body {
   margin: 0;
-  font-size: 1.75em;
+  font-size: 1.2em;
   background-color: #e9e9e2;
 }
 nav {
-  position: fixed;
-  top: 0;
-  right: 0;
   width: 100%;
-  z-index: 10;
 }
 @media (min-width: 992px) {
   nav {
     display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 10;
   }
 }
 nav div.nav-content {
@@ -40,11 +43,25 @@ nav div.nav-content {
   transition: 0.15s all ease-in-out;
   font-family: 'Permanent Marker', arial;
 }
+@media (max-width: 992px) {
+  nav div.nav-content {
+    justify-content: center;
+  }
+}
 nav div.nav-content h2.nav-title {
   color: white;
-  position: absolute;
-  left: 29px;
-  top: 1px;
+}
+@media (min-width: 992px) {
+  nav div.nav-content h2.nav-title {
+    position: absolute;
+    left: 29px;
+    top: 19px;
+  }
+}
+@media (max-width: 991px) {
+  nav div.nav-content h2.nav-title {
+    display: none;
+  }
 }
 nav div.nav-content a {
   font-family: arial;
@@ -57,15 +74,25 @@ nav div.nav-content a {
   font-size: 1.1em;
   font-family: 'Permanent Marker', arial;
 }
+@media (max-width: 992px) {
+  nav div.nav-content a {
+    font-size: 0.75em;
+  }
+}
 div.headerSection {
   background-image: url('../images/forest-background1.jpg');
   background-size: cover;
-  height: 100vh;
   margin-bottom: 50px;
 }
 @media (min-width: 992px) {
   div.headerSection {
     background-attachment: fixed;
+    height: 100vh;
+  }
+}
+@media (max-width: 991px) {
+  div.headerSection {
+    height: 75vh;
   }
 }
 div.headerSection div.header-text {
@@ -86,10 +113,19 @@ div.headerSection div.header-text h1 {
 }
 div.headerSection div.header-text h2 {
   font-size: 2.5vw;
-  margin-bottom: 100px;
+}
+@media (min-width: 992px) {
+  div.headerSection div.header-text h2 {
+    margin-bottom: 100px;
+  }
 }
 div.headerSection div.header-nav {
   margin-bottom: 50px;
+}
+@media (max-width: 992px) {
+  div.headerSection div.header-nav {
+    display: none;
+  }
 }
 div.headerSection div.header-nav a {
   color: white;
@@ -168,19 +204,43 @@ main#page-content {
   padding: 20px;
 }
 section {
-  scroll-margin-top: 70px;
+  scroll-margin-top: 80px;
   margin-bottom: 50px;
+}
+div.section-separation {
+  margin: 0 auto 15px;
+}
+@media (min-width: 992px) {
+  div.section-separation {
+    width: 190px;
+  }
+}
+@media (max-width: 991px) {
+  div.section-separation {
+    width: 35vw;
+  }
+}
+div.section-separation img {
+  width: 100%;
 }
 section.multi-section div.buttons-container {
   margin-bottom: 15px;
+  display: flex;
 }
 section.multi-section div.buttons-container button.multi-btn {
   background-color: black;
-  border: 1px solid black;
-  border-radius: 10px;
+  border-right: 1px solid white;
   color: white;
   font-size: 15px;
   padding: 10px;
+}
+section.multi-section div.buttons-container button.multi-btn:last-child {
+  border: none;
+}
+@media (max-width: 991px) {
+  section.multi-section div.buttons-container button.multi-btn {
+    flex: 1;
+  }
 }
 section.multi-section div.buttons-container button.multi-btn.active {
   background-color: white;

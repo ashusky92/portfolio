@@ -9,8 +9,8 @@ var navLoc = el.position().top + el.offset().top + el.outerHeight(true);
 // Adds functionality to elements through website, depending on scroll position
 $(window).on('scroll', function(){
   var scrollPos = $(this).scrollTop();
-  if($(window).width() > navLoc){
-    if(scrollPos > 885){
+  if($(window).width() > 992){
+    if(scrollPos > navLoc){
       $('nav').slideDown();
     } else {
       $('nav').slideUp();

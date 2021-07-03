@@ -3,6 +3,10 @@
   <head>
     <meta charset="utf-8">
     <title>Alex Husky | Portfolio</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
     <!-- Site CDNs -->
     <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
@@ -46,14 +50,22 @@
     <main id="page-content">
       <section id="about">
         <h2>About Me</h2>
-        <p>I am a web developer that looking to dive deeper into the field.  I am currently employed as a Tier 2 Support Agent for Dealer Spike.</p>
+        <p>When I was a freshman in High School, my favorite teacher introduced me to basic web development.  The best part was, I was able to crank out simple websites using only the basic notepad program that all Windows computers had installed.  I spent hours messing around with HTML 3 and CSS, making websites that looked like they were designed by a toddler.  I love every second of it.
+        <br><br>
+        Later in life, I decided that I wanted a more advanced understanding of web development and went to school back to school.  Although my academic focus was on Information Technology, I gravitated more toward the web development side of the cirriculum.
+        <br><br>
+        After finishing college, I landed a job as a Tier 1 Technical Support Agent at <a href="https://www.dealerspike.com" target="_blank">Dealer Spike LLC.</a>.  After a year at that position, I was promoted to a Tier 2 agent.  My time at Dealer Spike has been absolutely amazing and has helped me polish my web development skills.
+      </p>
       </section>
+
+      <div class="section-separation">
+        <img src="images/pinecone.svg">
+      </div>
+
       <section id="skills" class="multi-section">
         <h2>My Skills</h2>
         <div class="buttons-container">
-          <button class="multi-btn active" sect-target="html">HTML</button>
-          <button class="multi-btn" sect-target="css">CSS</button>
-          <button class="multi-btn" sect-target="js">Javascript</button>
+          <button class="multi-btn active" sect-target="html">HTML</button><button class="multi-btn" sect-target="css">CSS</button><button class="multi-btn" sect-target="js">Javascript</button>
         </div>
         <div class="content-container">
           <div class="multi-content active" id="html">
@@ -129,16 +141,32 @@
           </div>
         </div>
       </section>
+
+      <div class="section-separation">
+        <img src="images/pinecone.svg">
+      </div>
+
       <section id="projects">
         <h2>Projects</h2>
         <p>Most of these projects are small, but they were definitely a lot of fun.</p>
         <div class="project-container">
           <h4>RGB Logo</h4>
           <div class="project-content">
-            <script async src="//jsfiddle.net/Ashusky92/6Lbscerx/7/embed/"></script>
+            <script async src="//jsfiddle.net/Ashusky92/6Lbscerx/7/embed/js,html,css,result/dark/"></script>
+          </div>
+        </div>
+        <div class="project-container">
+          <h4>Gallery Builder</h4>
+          <div class="project-content">
+            <script async src="//jsfiddle.net/Ashusky92/amntrwzk/24/embed/js,html,css,result/dark/"></script>
           </div>
         </div>
       </section>
+
+      <div class="section-separation">
+        <img src="images/pinecone.svg">
+      </div>
+
       <section id="contact">
         <h2>Contact Me</h2>
         <div id="formio"></div>
@@ -166,13 +194,6 @@
           </a>
         </div>
       </div>
-      <script>
-        $('section.multi-section div.buttons-container button.multi-btn').on('click', function(){
-          var sectTarget = $(this).attr('sect-target');
-          $(this).addClass('active').siblings().removeClass('active');
-          $(this).parent().parent().find('div.content-container div#' + sectTarget).addClass('active').siblings().removeClass('active');
-        });
-      </script>
     </footer>
     <script src="js/main.js" charset="utf-8"></script>
   </body>
