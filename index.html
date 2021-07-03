@@ -27,7 +27,7 @@
         <a href="#contact">Contact</a>
       </div>
     </nav>
-    <div class="headerSection">
+    <div class="headerSection" id="top">
       <div class="header-text">
         <h1>Alex Husky</h1>
         <h2>Front-End Web Developer</h2>
@@ -171,16 +171,19 @@
         <h2>Contact Me</h2>
         <div id="formio"></div>
         <script type="text/javascript">
-        window.onload = function() {
-          Formio.createForm(document.getElementById('formio'), 'https://dcetkfloprovuyn.form.io/contactme');
-        };
-      </script>
+          window.onload = function() {
+            Formio.createForm(document.getElementById('formio'), 'https://dcetkfloprovuyn.form.io/contactme');
+          };
+        </script>
       </section>
+
+      <a href="#top" class="top-btn"><i class="fa fa-arrow-up"></i></a>
+
     </main>
     <footer>
       <div class="footer-text">
         <div class="copyright">Alex Husky &copy; 2021</div>
-        <div class="connect">
+        <!-- <div class="connect">
           <div class="connect-header">
             Connect:
           </div>
@@ -192,7 +195,7 @@
             <i class="fa fa-github"></i>
             <span>Github</span>
           </a>
-        </div>
+        </div> -->
       </div>
     </footer>
     <script src="js/main.js" charset="utf-8"></script>
