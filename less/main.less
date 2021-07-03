@@ -144,6 +144,7 @@ div.headerSection {
       background-color: #ffff;
       box-sizing: border-box;
       font-size: 1.25em;
+      border: 1px solid black;
       border-radius: 50%;
       display: flex;
       justify-content: center;
@@ -225,11 +226,14 @@ section.multi-section{
 }
 
 section#skills{
+  div.buttons-container{
+    @media(min-width: 992px){
+      margin-left: 40px;
+    }
+  }
   div.content-container{
-    div.row{
-      @media(min-width: 992px){
-        margin-left: 40px;
-      }
+    @media(min-width: 992px){
+      margin-left: 40px;
     }
   }
 }

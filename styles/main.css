@@ -137,6 +137,7 @@ div.headerSection div.header-social a {
   background-color: #ffff;
   box-sizing: border-box;
   font-size: 1.25em;
+  border: 1px solid black;
   border-radius: 50%;
   display: flex;
   justify-content: center;
@@ -192,7 +193,12 @@ section.multi-section div.content-container div.multi-content.active {
   display: block;
 }
 @media (min-width: 992px) {
-  section#skills div.content-container div.row {
+  section#skills div.buttons-container {
+    margin-left: 40px;
+  }
+}
+@media (min-width: 992px) {
+  section#skills div.content-container {
     margin-left: 40px;
   }
 }
