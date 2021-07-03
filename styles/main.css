@@ -289,6 +289,9 @@ a.top-btn {
 a.top-btn i {
   position: relative;
 }
+a.top-btn:hover {
+  background-color: #415738;
+}
 a.top-btn:hover i {
   animation-name: bounceAnimation;
   animation-duration: 1s;
