@@ -252,6 +252,11 @@ div.section-separation {
 }
 @media (max-width: 991px) {
   div.section-separation {
+    width: 20vw;
+  }
+}
+@media (max-width: 766px) {
+  div.section-separation {
     width: 35vw;
   }
 }
