@@ -45,7 +45,14 @@ nav div.nav-content {
 }
 @media (max-width: 992px) {
   nav div.nav-content {
+    display: none;
     justify-content: center;
+    position: fixed;
+    bottom: 48.8px;
+    width: 100%;
+    height: 95vh;
+    flex-direction: column;
+    z-index: 9999;
   }
 }
 nav div.nav-content h2.nav-title {
@@ -77,6 +84,8 @@ nav div.nav-content a {
 @media (max-width: 992px) {
   nav div.nav-content a {
     font-size: 0.75em;
+    text-align: center;
+    font-size: 2em;
   }
 }
 div.headerSection {
@@ -92,7 +101,7 @@ div.headerSection {
 }
 @media (max-width: 991px) {
   div.headerSection {
-    height: 75vh;
+    height: 27vh;
   }
 }
 div.headerSection div.header-text {
@@ -111,12 +120,23 @@ div.headerSection div.header-text h1 {
   font-size: 8vw;
   position: relative;
 }
+@media (max-width: 991px) {
+  div.headerSection div.header-text h1 {
+    font-size: 14vw;
+    margin-bottom: 25px;
+  }
+}
 div.headerSection div.header-text h2 {
   font-size: 2.5vw;
 }
 @media (min-width: 992px) {
   div.headerSection div.header-text h2 {
     margin-bottom: 100px;
+  }
+}
+@media (max-width: 991px) {
+  div.headerSection div.header-text h2 {
+    display: none !important;
   }
 }
 div.headerSection div.header-nav {
@@ -165,9 +185,13 @@ div.headerSection div.header-nav a:hover:after {
 }
 div.headerSection div.header-social {
   display: flex;
-  position: fixed;
-  bottom: 20px;
-  right: 30px;
+}
+@media (min-width: 992px) {
+  div.headerSection div.header-social {
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+  }
 }
 div.headerSection div.header-social a {
   background-color: #ffff;
@@ -185,8 +209,19 @@ div.headerSection div.header-social a {
   position: relative;
   transition: background-color 0.15s ease-in-out;
 }
+@media (max-width: 992px) {
+  div.headerSection div.header-social a {
+    height: 35px;
+    width: 35px;
+  }
+}
 div.headerSection div.header-social a:first-child {
   margin-right: 15px;
+}
+@media (max-width: 991px) {
+  div.headerSection div.header-social a:first-child {
+    margin-right: 40px;
+  }
 }
 div.headerSection div.header-social a.linkedin:hover {
   background-color: #0072b1;
@@ -311,6 +346,22 @@ a.top-btn:hover i {
   }
   75% {
     bottom: 0;
+  }
+}
+button.mobile-menu {
+  color: white;
+  background-color: #415738;
+  padding: 10px 15px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  left: 50%;
+  transform: translatex(-50.1%);
+  z-index: 9999;
+}
+@media (min-width: 992px) {
+  button.mobile-menu {
+    display: none;
   }
 }
 footer {

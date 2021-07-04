@@ -1,7 +1,11 @@
 // out: ../styles/main.css
 
 // Variables
+@mobile-min: 991px;
+@mobile-max: 992px;
+
 @background-color: rgb(233, 233, 226);
+
 
 // Fonts
  @import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
@@ -48,7 +52,15 @@ nav {
       font-family: 'Permanent Marker', arial;
 
       @media(max-width: 992px){
+        display: none;
         justify-content: center;
+        position: fixed;
+        bottom: 48.8px;
+        width: 100%;
+        height: 95vh;
+        flex-direction: column;
+        z-index: 9999;
+
       }
       h2.nav-title{
         color: white;
@@ -76,6 +88,8 @@ nav {
 
         @media(max-width: 992px){
           font-size: 0.75em;
+          text-align: center;
+          font-size: 2em;
         }
       }
     }
@@ -91,7 +105,7 @@ div.headerSection {
     }
 
     @media(max-width: 991px){
-      height: 75vh;
+      height: 27vh;
     }
     div.header-text{
         background: linear-gradient(rgba(0,0,0,.25), black);
@@ -107,12 +121,20 @@ div.headerSection {
             margin: 0;
             font-size: 8vw;
             position: relative;
+            @media(max-width: 991px){
+              font-size: 14vw;
+              margin-bottom: 25px;
+            }
         }
 
         h2{
             font-size: 2.5vw;
             @media(min-width: 992px){
               margin-bottom: 100px;
+            }
+
+            @media(max-width: 991px){
+              display: none !important;
             }
         }
 
@@ -165,9 +187,11 @@ div.headerSection {
 
   div.header-social{
     display: flex;
-    position: fixed;
-    bottom: 20px;
-    right: 30px;
+    @media(min-width: 992px){
+      position: fixed;
+      bottom: 20px;
+      right: 30px;
+    }
     a{
       background-color: #ffff;
       box-sizing: border-box;
@@ -183,24 +207,20 @@ div.headerSection {
       width: 50px;
       position: relative;
       transition: background-color 0.15s ease-in-out;
-      &:first-child{
-        margin-right: 15px;
+
+      @media(max-width: 992px){
+        height: 35px;
+        width: 35px;
       }
 
-      // &:before{
-      //   content: "";
-      //   width: 100%;
-      //   height: 100%;
-      //   border: 1px solid white;
-      //   border-radius: 50%;
-      //   position: absolute;
-      //   z-index: -1;
-      // }
-      //
-      // &:hover:before{
-      //   width: 200%;
-      //   height: 200%;
-      // }
+      &:first-child{
+        margin-right: 15px;
+        @media(max-width: 991px){
+          margin-right: 40px;
+        }
+      }
+
+
 
       &.linkedin:hover{
         background-color: #0072b1;
@@ -344,6 +364,22 @@ a.top-btn{
 
     75% {
         bottom: 0;
+    }
+}
+
+button.mobile-menu{
+    color: white;
+    background-color: #415738;
+    padding: 10px 15px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    left: 50%;
+    transform: translatex(-50.1%);
+    z-index: 9999;
+
+    @media(min-width: 992px){
+        display: none;
     }
 }
 
