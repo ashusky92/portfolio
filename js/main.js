@@ -96,7 +96,7 @@ $(window).resize(function(){
   if(checkScreenWidth(991, "less-equal")){
     $('nav div.nav-content a').click(function(){
       $(this).parent().hide();
-      $(this).text('MENU').css('background-color', '#415738');
+      $('button.mobile-menu').text('MENU').css('background-color', '#415738');
     });
   } else {
     $('nav div.nav-content a').removeClass('mobile-menu');
