@@ -5,18 +5,8 @@
 // Functions
 
 // Check screen width
-function checkScreenWidth(width, compare){
-  switch (compare) {
-    case "greater-equal":
-      return $(window).width() >= width;
-    case "greater":
-      return $(window).width() > width;
-    case "less-equal":
-      return $(window).width() <= width;
-    case "less":
-      return $(window).width() < width;
-
-  }
+function checkScreenWidth(comparison, width){
+  return eval(String($(window).width()) + " " + comparison + " " + width)
 }
 
 
@@ -44,22 +34,6 @@ $('section.multi-section div.buttons-container button.multi-btn').on('click', fu
 });
 
 
-// console.log(`Width is greater than 992: ${checkScreenWidth(>=, 992)}`);
-
-function checkScreenWidth(width, compare){
-  switch (compare) {
-    case "greater-equal":
-      return $(window).width() >= width;
-    case "greater":
-      return $(window).width() > width;
-    case "less-equal":
-      return $(window).width() <= width;
-    case "less":
-      return $(window).width() < width;
-
-  }
-
-}
 
 
 /*
@@ -85,15 +59,16 @@ $('button.mobile-menu').click(function(){
 });
 
 // Navigation alterations based on screen width
-if(checkScreenWidth(991, "less-equal")){
+if(checkScreenWidth("<=", "991")){
   $('nav div.nav-content a').click(function(){
     $(this).parent().hide();
     $('button.mobile-menu').text('MENU').css('background-color', '#415738').removeClass('menu-open');
   });
 }
 
+// Navigation alterations based on screen width, but every time the screensize changes
 $(window).resize(function(){
-  if(checkScreenWidth(991, "less-equal")){
+  if(checkScreenWidth("<=", "991")){
     $('nav div.nav-content a').click(function(){
       $(this).parent().hide();
       $('button.mobile-menu').text('MENU').css('background-color', '#415738');
